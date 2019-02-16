@@ -1,30 +1,30 @@
 Hướng dẫn cài đặt docker
-========================================
+====================================================
 
-#I. Giới thiệu docker
+#I. Yêu cầu
 
-  - Docker là 1 dự án mã nguồn mở trên github
+  - Hệ điều hành: Linux (Ubuntu, CentoS)
 
-  - Docker tạo ra các container cho các ứng dụng phần mềm
+  - Ram: Tối thiểu 2GB
 
-  -  Vận chuyển container
+  - Bộ nhớ tối thiểu: 10GB
 
-  - Chia sẽ container
+  - 64 bit, Version kernel >= 3.1. Kiểm tra bằng lệnh: `uname -r`
 
-  - Khẩu quyết của Docker: `Build, ship, deploy, any application, any where`:
-    
-    + Build: Đóng gói ứng dụng trong một container
+#II. Cài đặt
 
-    + Ship: vận chuyển container
+  - `sudo apt-get update`
 
-    + Deploy: triển khai, chạy container
+  - `sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`
 
-    + Bất cứ ứng dụng nào chạy được trên linux
+  - `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
-    + Tất cả mọi nơi: laptop, máy chủ, máy ảo, cloud instance,...
+  - `sudo apt-key fingerprint 0EBFCD88`
 
-    + Đóng gói phần mềm dể dàng
+  - `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
 
-    + Deploy nhanh
+  - `sudo apt-get update`
 
-    + Không cần cấu hình và cài đặt môi trường rườm rà.
+  - `sudo apt-get install docker-ce docker-ce-cli containerd.io`
+
+  - ``
